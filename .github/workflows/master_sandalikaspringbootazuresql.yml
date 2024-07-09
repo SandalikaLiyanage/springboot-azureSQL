@@ -47,7 +47,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: java-app
-          path: '${{ github.workspace }}/target'
+          path: D:\a\springboot-azureSQL\springboot-azureSQL/target
       
       - name: Login to Azure
         uses: azure/login@v1
