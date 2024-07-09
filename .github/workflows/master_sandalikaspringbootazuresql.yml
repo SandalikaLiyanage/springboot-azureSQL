@@ -31,7 +31,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: java-app
-          path: '${{ github.workspace }}/target/*.jar'
+          path: 'springboot-azureSQL/target/*.jar'
 
   deploy:
     runs-on: windows-latest
@@ -61,5 +61,5 @@ jobs:
         with:
           app-name: 'sandalikaSpringbootAzureSql'
           slot-name: 'Production'
-          package: '*.jar'
+          package: 'springboot-azureSQL/target/*.jar'
           
