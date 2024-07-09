@@ -62,5 +62,5 @@ jobs:
         with:
           app-name: 'sandalikaSpringbootAzureSql'
           slot-name: 'Production'
-          package: springboot-azureSQL/target/*.jar # Ensure this matches the name of your artifact
+          package: java-app/*.jar # Ensure this matches the name of your artifact
           
