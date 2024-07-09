@@ -62,5 +62,5 @@ jobs:
         with:
           app-name: 'sandalikaSpringbootAzureSql'
           slot-name: 'Production'
-          package: '*.jar'
+          package: '${{ github.workspace }}/target/*.jar' # Ensure this matches the name of your artifact
           
