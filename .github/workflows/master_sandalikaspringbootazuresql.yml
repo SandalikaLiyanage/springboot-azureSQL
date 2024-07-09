@@ -25,7 +25,7 @@ jobs:
         run: cd springboot-azureSQL
         
       - name: Build with Maven
-        run: mvn clean install
+        run: mvn -f springboot-azureSQL/pom.xml clean install
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
