@@ -31,7 +31,8 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: java-app
-          path: '${{ github.workspace }}/target/*.jar'
+          path: springboot-azureSQL/target/*.jar
+
 
   deploy:
     runs-on: windows-latest
@@ -47,8 +48,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: java-app
-          path: '${{ github.workspace }}/target'
-      
+          
       - name: Login to Azure
         uses: azure/login@v1
         with:
@@ -62,5 +62,5 @@ jobs:
         with:
           app-name: 'sandalikaSpringbootAzureSql'
           slot-name: 'Production'
-          package: '*.jar' # Ensure this matches the name of your artifact
+          package: springboot-azureSQL/target/*.jar # Ensure this matches the name of your artifact
           
